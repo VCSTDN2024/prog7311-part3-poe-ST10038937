@@ -124,10 +124,6 @@ This prototype was developed using an iterative, Agile-inspired approach. Each d
 - **Build Errors:** Run `dotnet clean` followed by `dotnet restore` to resolve potential dependency issues.
 - **File Locked Errors:** Ensure no previous instances of the application are still running in the background. Use your system's Task Manager to terminate any lingering `ST10038937_prog7311_poe1.exe` processes.
 
-## Screenshots
-
-*(Screenshots of the final application, including the dashboard, forum, and product pages, will be added here.)*
-
 ## License
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
