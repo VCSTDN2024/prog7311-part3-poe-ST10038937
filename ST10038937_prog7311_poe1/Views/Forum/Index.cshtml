@@ -1,0 +1,55 @@
+@model IEnumerable<ST10038937_prog7311_poe1.Models.ForumPost>
+
+@{
+    ViewData["Title"] = "Community Forum";
+}
+
+<div class="container main-container">
+    <header class="d-flex justify-content-between align-items-center mb-4">
+        <h1 class="display-5">@ViewData["Title"]</h1>
+        <a class="btn btn-primary" asp-action="Create" aria-label="Create a new forum post">Create New Post</a>
+    </header>
+
+    <p class="lead text-center mb-5">Join the conversation, share your knowledge, and connect with peers.</p>
+
+    <section aria-labelledby="forum-posts-heading">
+        <h2 id="forum-posts-heading" class="visually-hidden">Forum Posts</h2>
+
+        @if (!Model.Any())
+        {
+            <div class="card" role="status">
+                <div class="card-body text-center">
+                    <p class="card-text">No posts have been made yet. Be the first to start a discussion!</p>
+                </div>
+            </div>
+        }
+        else
+        {
+            @foreach (var post in Model)
+            {
+                <article class="card mb-3">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between">
+                            <div>
+                                <h3 class="h5 card-title mb-1">
+                                    <a asp-action="Details" asp-route-id="@post.Id" class="text-decoration-none">@post.Title</a>
+                                </h3>
+                                <small class="text-muted">
+                                    Posted by @(post.User?.UserName ?? "Anonymous") on @post.CreatedAt.ToLongDateString()
+                                </small>
+                            </div>
+                            <div class="text-end">
+                                <span class="badge bg-secondary me-2" aria-label="@post.Replies.Count() replies to this post">@post.Replies.Count() Replies</span>
+                                <a class="btn btn-sm btn-outline-primary" asp-action="Details" asp-route-id="@post.Id" aria-label="View post: @post.Title">View</a>
+                                @if (User.IsInRole("Employee"))
+                                {
+                                    <a class="btn btn-sm btn-outline-danger" asp-action="Delete" asp-route-id="@post.Id" aria-label="Delete post: @post.Title">Delete</a>
+                                }
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            }
+        }
+    </section>
+</div>

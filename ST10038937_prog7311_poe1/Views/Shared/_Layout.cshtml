@@ -1,0 +1,99 @@
+@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localizer
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Agri-Energy Connect Platform</title>
+    <script type="importmap"></script>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/custom.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/ST10038937_prog7311_poe1.styles.css" asp-append-version="true" />
+</head>
+<body>
+<script>
+    // Set selected language in dropdown
+    (function() {
+        var culture = (document.cookie.match(/\.AspNetCore.Culture=([^;]+)/) || [])[1];
+        if (culture) {
+            var val = culture.split('=')[1].split('|')[0];
+            var sel = document.getElementById('cultureSelect');
+            if (sel) sel.value = val;
+        }
+    })();
+</script>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark border-bottom box-shadow mb-3">
+            <div class="container">
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">ST10038937 - Gontse Sebolai</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Index" data-translate-key="Home">@Localizer["Home"]</a>
+                        </li>
+                        @if (User.Identity?.IsAuthenticated == true)
+                        {
+                            @if (User.IsInRole("Farmer"))
+                            {
+                                <li class="nav-item">
+                                    <a class="nav-link" asp-area="" asp-controller="Product" asp-action="Index" data-translate-key="MyProducts">@Localizer["My Products"]</a>
+                                </li>
+                            }
+                            @if (User.IsInRole("Employee"))
+                            {
+                                <li class="nav-item">
+                                    <a class="nav-link" asp-area="" asp-controller="Farmer" asp-action="Index" data-translate-key="FarmerManagement">@Localizer["FarmerManagement"]</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" asp-area="" asp-controller="Product" asp-action="Index" data-translate-key="Products">@Localizer["Products"]</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" asp-area="" asp-controller="AuditLogs" asp-action="Index" data-translate-key="AuditLogs">@Localizer["Audit Logs"]</a>
+                                </li>
+                            }
+                        }
+                        <li class="nav-item">
+                            <a class="nav-link" asp-area="" asp-controller="Home" asp-action="About" data-translate-key="About">@Localizer["About"]</a>
+                        </li>
+                    </ul>
+                    <partial name="_LoginPartial" />
+                    <form id="selectLanguage" asp-controller="Home" asp-action="SetLanguage" method="post" class="d-flex ms-auto">
+                        <label class="me-2" for="cultureSelect" data-translate-key="Language">@Localizer["Language"]:</label>
+                        <input type="hidden" name="returnUrl" value="@(Context.Request.Path + Context.Request.QueryString)" />
+                        <select id="cultureSelect" name="culture" class="form-select form-select-sm me-2">
+                            <option value="en" data-translate-key="English">@Localizer["English"]</option>
+                            <option value="af" data-translate-key="Afrikaans">@Localizer["Afrikaans"]</option>
+                            <option value="zu" data-translate-key="isiZulu">@Localizer["isiZulu"]</option>
+                        </select>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            <div class="content-container">
+                @RenderBody()
+            </div>
+
+@section Scripts {
+    @RenderSection("Scripts", required: false)
+}
+
+        </main>
+    </div>
+
+    <!-- Footer removed as requested -->
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/js/site-custom.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- Shared -->
+  <data name="Welcome" xml:space="preserve">
+    <value>Siyakwamukela ku-Agri-Energy Connect!</value>
+  </data>
+  <data name="Forum" xml:space="preserve">
+    <value>I-Forum yomphakathi</value>
+  </data>
+  <data name="Products" xml:space="preserve">
+    <value>Imikhiqizo</value>
+  </data>
+  <data name="Language" xml:space="preserve">
+    <value>Ulimi</value>
+  </data>
+
+  <!-- About Page -->
+  <data name="AboutAgriEnergyConnect" xml:space="preserve">
+    <value>Mayelana ne-Agri-Energy Connect</value>
+  </data>
+  <data name="AnEnterpriseGradeSoftwareSystem" xml:space="preserve">
+    <value>Isistimu Yesofthiwe Yezinga Lebhizinisi Yomkhakha Wezolimo Wesimanje</value>
+  </data>
+  <data name="PlatformOverview" xml:space="preserve">
+    <value>Ukubuka konke kwePlatform</value>
+  </data>
+  <data name="AgriEnergyConnectDescription" xml:space="preserve">
+    <value>I-Agri-Energy Connect iyisistimu yebhizinisi esezingeni eliphezulu, esekelwe kuwebhu, eklanyelwe ukusebenza njengemakethe emaphakathi yomkhakha wezolimo. Inika amandla abalimi ngokubanikeza amathuluzi aqinile okuphatha imikhiqizo yabo, kuyilapho ibaxhumanisa nenethiwekhi ebanzi yabasebenzi nababambiqhaza. Le platform yenza ukuxhumana okungenazihibe, ukuphathwa kwedatha okusobala, nokuzibandakanya komphakathi, iqhube ukusebenza kahle nokukhula kwabo bonke abasebenzisi.</value>
+  </data>
+  <data name="KeyFeatures" xml:space="preserve">
+    <value>Izici Eziyinhloko</value>
+  </data>
+  <data name="ProductFarmerManagement" xml:space="preserve">
+    <value>Ukuphathwa Komkhiqizo Nomlimi</value>
+  </data>
+  <data name="ProductFarmerManagementDescription" xml:space="preserve">
+    <value>Ukusebenza okugcwele kokudala, ukufunda, ukubuyekeza, nokususa (CRUD) kwamaphrofayili abalimi nohlu lwemikhiqizo yabo.</value>
+  </data>
+  <data name="CommunityForum" xml:space="preserve">
+    <value>I-Forum Yomphakathi</value>
+  </data>
+  <data name="CommunityForumDescription" xml:space="preserve">
+    <value>Iforamu yokuxhumana yababalimi nabasebenzi ukuze bazibandakanye, babuze imibuzo, futhi babelane ngolwazi, ephelele nezimpendulo nokulinganisela.</value>
+  </data>
+  <data name="RoleBasedAccessControl" xml:space="preserve">
+    <value>Ukulawulwa Kokufinyelela Okusekelwe Endimeni</value>
+  </data>
+  <data name="RoleBasedAccessControlDescription" xml:space="preserve">
+    <value>Isistimu yokuqinisekisa nokugunyaza evikelekile ehlukanisa phakathi kwezindima zoMlimi noMsebenzi, iqinisekise ukuthi abasebenzisi bafinyelela kuphela ezicini ezifanele.</value>
+  </data>
+  <data name="AuditLogging" xml:space="preserve">
+    <value>Ukugcinwa Kwamarekhodi Okucwaninga</value>
+  </data>
+  <data name="AuditLoggingDescription" xml:space="preserve">
+    <value>Imikhondo yokucwaninga ebanzi futhi ehlungekayo erekhoda imicimbi ebalulekile yesistimu ukuze kuvikelwe, kuhambisane nomthetho, futhi kuxazululwe izinkinga.</value>
+  </data>
+  <data name="AjaxLocalization" xml:space="preserve">
+    <value>Ukuhumusha Okunikezwa Amandla yi-AJAX</value>
+  </data>
+  <data name="AjaxLocalizationDescription" xml:space="preserve">
+    <value>Ukushintsha ulimi okungenazihibe, okungadingi ukuvuselela ikhasi, phakathi kwesiNgisi, isiBhunu, nesiZulu ukuze kube nokuhlangenwe nakho komsebenzisi okuphakeme, okungaphazamiseki.</value>
+  </data>
+  <data name="ModernUIAccessibility" xml:space="preserve">
+    <value>I-UI Yesimanje Nokufinyeleleka</value>
+  </data>
+  <data name="ModernUIAccessibilityDescription" xml:space="preserve">
+    <value>Isixhumi esibonakalayo esiphendulayo, esikhangayo ngokubukeka, esigxile kakhulu ekufinyelelekeni (ARIA, WCAG) ukuqinisekisa ukusetshenziswa yibo bonke.</value>
+  </data>
+  <data name="EnterpriseCharacteristics" xml:space="preserve">
+    <value>Izici Zesistimu Yesofthiwe Yebhizinisi</value>
+  </data>
+  <data name="EnterprisePrinciples" xml:space="preserve">
+    <value>I-platform yethu yakhelwe phezu kwezimiso eziyinhloko zebhizinisi ukuqinisekisa ukuthi iqinile, ithembekile, futhi ilungele imisebenzi ebalulekile yebhizinisi:</value>
+  </data>
+  <data name="Scalability" xml:space="preserve">
+    <value>Ukwandiseka:</value>
+  </data>
+  <data name="ScalabilityDescription" xml:space="preserve">
+    <value>Yakhelwe phezu kohlaka lwe-ASP.NET Core olusebenza ngezinga eliphezulu, isistimu yakhelwe ukusingatha ukukhula kwabasebenzisi nedatha ngempumelelo.</value>
+  </data>
+  <data name="Security" xml:space="preserve">
+    <value>Ezokuphepha:</value>
+  </data>
+  <data name="SecurityDescription" xml:space="preserve">
+    <value>Isebenzisa i-ASP.NET Core Identity ukuze kuqinisekiswe nokuqinisekiswa okuqinile, okulekelelwa ukugcinwa kwamarekhodi okucwaninga okuningiliziwe ukuze kulandeleke ngokugcwele.</value>
+  </data>
+  <data name="ReliabilityMaintainability" xml:space="preserve">
+    <value>Ukuthembeka Nokulungiseka:</value>
+  </data>
+  <data name="ReliabilityMaintainabilityDescription" xml:space="preserve">
+    <value>Ukuhambisana nezimiso ze-SOLID nokusetshenziswa kwamaphethini wokuklama amisiwe kuholela kukhodi ehlanzekile, elungisekayo, futhi ehlolwayo.</value>
+  </data>
+  <data name="Accessibility" xml:space="preserve">
+    <value>Ukufinyeleleka (A11y):</value>
+  </data>
+  <data name="AccessibilityDescription" xml:space="preserve">
+    <value>Ukuzibophezela okuphelele ekufinyelelekeni, okuhlanganisa izimpawu zendawo ze-ARIA, i-HTML enenjongo, nomklamo onokugqama okuphezulu ukuze kuhlangatshezwane nezidingo ezihlukahlukene zabasebenzisi.</value>
+  </data>
+  <data name="DesignAndArchitecture" xml:space="preserve">
+    <value>Amaphethini Wokuklama Nokwakha</value>
+  </data>
+  <data name="DesignPatternsIntro" xml:space="preserve">
+    <value>Ukwakheka kwesistimu kusekelwe kumaphethini wokuklama afakazelwe ukuqinisekisa ukuhlukaniswa okucacile kwezindaba kanye nesakhiwo esiguquguqukayo, esisekelwe ezingxenyeni:</value>
+  </data>
+  <data name="MVC" xml:space="preserve">
+    <value>I-Model-View-Controller (MVC)</value>
+  </data>
+  <data name="MVCDescription" xml:space="preserve">
+    <value>Iphethini eyinhloko yokwakha ehlukanisa umqondo wohlelo lokusebenza, idatha, nokwethulwa, ekhuthaza ukuthuthukiswa okuhlelekile nokuhambisanayo.</value>
+  </data>
+  <data name="RepositoryPattern" xml:space="preserve">
+    <value>Iphethini ye-Repository</value>
+  </data>
+  <data name="RepositoryPatternDescription" xml:space="preserve">
+    <value>Ihlukanisa umqondo webhizinisi kusendlalelo sokufinyelela kudatha, ivumele imisebenzi yedatha eguquguqukayo futhi ehlolwayo.</value>
+  </data>
+  <data name="ObserverPattern" xml:space="preserve">
+    <value>Iphethini ye-Observer</value>
+  </data>
+  <data name="ObserverPatternDescription" xml:space="preserve">
+    <value>Inika amandla indlela yokushicilela nokubhalisa yokuphathwa kwemicimbi, idale isistimu ehlukanisiwe lapho izingxenye zingasabela khona ekushintsheni kwesimo ngaphandle kokuncika okuqondile. Lokhu kuboniswa bukhoma ngezansi.</value>
+  </data>
+  <data name="DependencyInjection" xml:space="preserve">
+    <value>I-Dependency Injection (DI)</value>
+  </data>
+  <data name="DependencyInjectionDescription" xml:space="preserve">
+    <value>Isetshenziswa kakhulu kulo lonke uhlelo lokusebenza ngesitsha sesevisi esakhelwe ngaphakathi se-ASP.NET Core ukuphatha ukuncika nokukhuthaza ukuhlangana okuxekethile.</value>
+  </data>
+  <data name="LiveObserverDemo" xml:space="preserve">
+    <value>Idemo Ebukhoma Yephethini Ye-Observer</value>
+  </data>
+  <data name="LiveObserverDemoDescription" xml:space="preserve">
+    <value>Le demo ibonisa ukuthi izingxenye eziningi (isibonisi sesimo kanye ne-logger) zisabela kanjani ekushintsheni kwesimo kusuka emthonjeni owodwa ngaphandle kokuxhunyaniswa ngokuqondile.</value>
+  </data>
+  <data name="SubjectStatus" xml:space="preserve">
+    <value>Isimo Sendaba:</value>
+  </data>
+  <data name="TriggerStateChange" xml:space="preserve">
+    <value>Cupha Ukushintsha Kwesimo</value>
+  </data>
+  <data name="ObserverLog" xml:space="preserve">
+    <value>Ilogi Ye-Observer:</value>
+  </data>
+  <data name="DevelopmentApproachHeading" xml:space="preserve">
+    <value>Ukuthuthukiswa Kwesistimu Yesofthiwe Yebhizinisi</value>
+  </data>
+  <data name="TechStack" xml:space="preserve">
+    <value>Isitaki Sobuchwepheshe</value>
+  </data>
+  <data name="Backend" xml:space="preserve">
+    <value>I-Backend:</value>
+  </data>
+  <data name="Frontend" xml:space="preserve">
+    <value>I-Frontend:</value>
+  </data>
+  <data name="Database" xml:space="preserve">
+    <value>I-Database:</value>
+  </data>
+  <data name="Authentication" xml:space="preserve">
+    <value>Ukuqinisekisa:</value>
+  </data>
+  <data name="DevelopmentApproach" xml:space="preserve">
+    <value>Indlela Yokuthuthukisa</value>
+  </data>
+  <data name="DevelopmentApproachDescription" xml:space="preserve">
+    <value>Le phrojekthi yathuthukiswa kusetshenziswa indlela yokusebenza ephindaphindayo nekhulayo, eholwa yizimiso ze-agile. Sigxile ekuletheni izingxenye ezisebenzayo ngezigaba, sivumela impendulo eqhubekayo nokucwengwa. Le ndlela igcizelele ikhwalithi yekhodi, ukuhambisana nemikhuba emihle, nokuzibophezela ekwakheni umkhiqizo wokugcina oqinile futhi ogxile kumsebenzisi.</value>
+  </data>
+</root>

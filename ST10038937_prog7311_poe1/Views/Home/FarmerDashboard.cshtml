@@ -1,0 +1,116 @@
+@{
+    ViewData["Title"] = "Farmer Dashboard";
+}
+
+<div class="container">
+    <div class="row mb-4">
+        <div class="col">
+            <div class="card bg-primary text-white shadow">
+                <div class="card-body">
+                    <h1 class="display-4">Welcome, @ViewBag.Farmer.Name</h1>
+                    <p class="lead">@ViewBag.Farmer.FarmName</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mb-4">
+        <div class="col-md-4">
+            <div class="card shadow h-100">
+                <div class="card-header bg-success text-white">
+                    <h5 class="mb-0">Products</h5>
+                </div>
+                <div class="card-body">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h2 class="display-4">@ViewBag.ProductCount</h2>
+                        <i class="bi bi-box-seam fs-1"></i>
+                    </div>
+                    <p>Total products in your inventory</p>
+                </div>
+                <div class="card-footer">
+                    <a asp-controller="Product" asp-action="Index" class="btn btn-outline-success">View Products</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card shadow h-100">
+                <div class="card-header bg-info text-white">
+                    <h5 class="mb-0">Categories</h5>
+                </div>
+                <div class="card-body">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h2 class="display-4">@(ViewBag.Categories?.Count ?? 0)</h2>
+                        <i class="bi bi-tags fs-1"></i>
+                    </div>
+                    <p>Different product categories</p>
+                </div>
+                <div class="card-footer">
+                    <a asp-controller="Product" asp-action="Create" class="btn btn-outline-info">Add New Product</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card shadow h-100">
+                <div class="card-header bg-warning">
+                    <h5 class="mb-0">Profile</h5>
+                </div>
+                <div class="card-body">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item d-flex justify-content-between">
+                            <span>Farm Name:</span>
+                            <span class="fw-bold">@ViewBag.Farmer.FarmName</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between">
+                            <span>Email:</span>
+                            <span>@ViewBag.Farmer.Email</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between">
+                            <span>Phone:</span>
+                            <span>@ViewBag.Farmer.PhoneNumber</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col">
+            <div class="card shadow">
+                <div class="card-header bg-primary text-white">
+                    <h5 class="mb-0">Quick Actions</h5>
+                </div>
+                <div class="card-body">
+                    <div class="row g-3">
+                        <div class="col-md-4">
+                            <a asp-controller="Product" asp-action="Create" class="btn btn-outline-primary w-100 p-3">
+                                <i class="bi bi-plus-circle fs-4 d-block mb-2"></i>
+                                Add New Product
+                            </a>
+                        </div>
+                        <div class="col-md-4">
+                            <a asp-controller="Product" asp-action="Index" class="btn btn-outline-primary w-100 p-3">
+                                <i class="bi bi-list-ul fs-4 d-block mb-2"></i>
+                                View My Products
+                            </a>
+                        </div>
+                        <div class="col-md-4">
+                            <a asp-area="Identity" asp-page="/Account/Manage/Index" class="btn btn-outline-primary w-100 p-3">
+                                <i class="bi bi-person-circle fs-4 d-block mb-2"></i>
+                                Manage Account
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        // Add any dashboard-specific scripts here
+    </script>
+}

@@ -1,0 +1,68 @@
+@model IEnumerable<ST10038937_prog7311_poe1.Models.Farmer>
+
+@{
+    ViewData["Title"] = "Farmers";
+}
+
+<div class="container main-container">
+    <header class="d-flex justify-content-between align-items-center mb-4">
+        <h1 class="display-4">Farmers</h1>
+        <a asp-action="Create" class="btn btn-primary" aria-label="Register a new farmer profile">Add New Farmer</a>
+    </header>
+
+    @if (TempData["SuccessMessage"] != null)
+    {
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            @TempData["SuccessMessage"]
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    }
+
+    <section class="card shadow" aria-labelledby="farmers-table-heading">
+        <div class="card-header">
+            <h2 id="farmers-table-heading" class="h5 mb-0 text-white">Registered Farmers</h2>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-hover">
+                    <caption class="visually-hidden">A list of all registered farmers with actions to view, edit, or delete their profiles.</caption>
+                    <thead class="table-light">
+                        <tr>
+                            <th scope="col">@Html.DisplayNameFor(model => model.Name)</th>
+                            <th scope="col">@Html.DisplayNameFor(model => model.FarmName)</th>
+                            <th scope="col">@Html.DisplayNameFor(model => model.Address)</th>
+                            <th scope="col">@Html.DisplayNameFor(model => model.PhoneNumber)</th>
+                            <th scope="col">@Html.DisplayNameFor(model => model.Email)</th>
+                            <th scope="col">Products</th>
+                            <th scope="col">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>@Html.DisplayFor(modelItem => item.Name)</td>
+                                <td>@Html.DisplayFor(modelItem => item.FarmName)</td>
+                                <td>@Html.DisplayFor(modelItem => item.Address)</td>
+                                <td>@Html.DisplayFor(modelItem => item.PhoneNumber)</td>
+                                <td>@Html.DisplayFor(modelItem => item.Email)</td>
+                                <td>
+                                    <a asp-controller="Product" asp-action="Index" asp-route-farmerId="@item.FarmerId" class="btn btn-outline-primary btn-sm" aria-label="View products for @item.Name">
+                                        View Products
+                                    </a>
+                                </td>
+                                <td>
+                                    <div class="btn-group" role="group" aria-label="Actions for @item.Name">
+                                        <a asp-action="Details" asp-route-id="@item.FarmerId" class="btn btn-info btn-sm" aria-label="View details for @item.Name">Details</a>
+                                        <a asp-action="Edit" asp-route-id="@item.FarmerId" class="btn btn-warning btn-sm" aria-label="Edit details for @item.Name">Edit</a>
+                                        <a asp-action="Delete" asp-route-id="@item.FarmerId" class="btn btn-danger btn-sm" aria-label="Delete profile for @item.Name">Delete</a>
+                                    </div>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+</div>
