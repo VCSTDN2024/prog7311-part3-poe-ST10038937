@@ -32,9 +32,7 @@
 This final prototype for the Agri-Energy Connect Platform represents a complete, enterprise-ready web application. Building upon the initial foundation, this version introduces several advanced features designed to enhance security, user engagement, and accessibility. Key additions include a fully interactive community forum, comprehensive audit logging, seamless multi-language support, and a modernized user interface, making the platform robust, scalable, and user-centric.
 
 ## YouTube Video Demonstration
-*A link to the final video demonstration will be placed here.*
-
-`https://youtu.be/your_new_video_link`
+https://youtu.be/mD866JBUwnQ
 
 ## Key Features
 
