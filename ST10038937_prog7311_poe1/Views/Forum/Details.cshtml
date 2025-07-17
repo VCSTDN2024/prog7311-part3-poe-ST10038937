@@ -1,0 +1,67 @@
+@model ST10038937_prog7311_poe1.Models.ForumPost
+
+@{
+    ViewData["Title"] = Model.Title;
+}
+
+<div class="container main-container">
+    <main>
+        <article class="card mb-4" aria-labelledby="post-title">
+            <div class="card-header">
+                <h1 id="post-title" class="h3 mb-0 text-white">@Model.Title</h1>
+            </div>
+            <div class="card-body">
+                <p class="card-text">@Model.Content</p>
+            </div>
+            <div class="card-footer text-muted">
+                Posted by @(Model.User?.UserName ?? "Anonymous") on @Model.CreatedAt.ToLongDateString()
+            </div>
+        </article>
+
+        <section class="mt-4" aria-labelledby="replies-heading">
+            <h2 id="replies-heading" class="h4 mb-3">Replies</h2>
+            @if (Model.Replies != null && Model.Replies.Any())
+            {
+                foreach (var reply in Model.Replies.OrderBy(r => r.CreatedAt))
+                {
+                    <article class="card mb-3">
+                        <div class="card-body">
+                            <p class="card-text">@reply.Content</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <small class="text-muted">By @(reply.User?.UserName ?? "Anonymous") on @reply.CreatedAt.ToLongDateString()</small>
+                                @if (User.IsInRole("Employee"))
+                                {
+                                    <a asp-action="DeleteReply" asp-route-id="@reply.Id" class="btn btn-sm btn-outline-danger" aria-label="Delete reply posted by @(reply.User?.UserName ?? "Anonymous")">Delete</a>
+                                }
+                            </div>
+                        </div>
+                    </article>
+                }
+            }
+            else
+            {
+                <p role="status">No replies yet. Be the first to respond!</p>
+            }
+        </section>
+
+        <section class="card mt-4" aria-labelledby="add-reply-heading">
+            <div class="card-header">
+                <h3 id="add-reply-heading" class="h5 mb-0 text-white">Add Your Reply</h3>
+            </div>
+            <div class="card-body">
+                <form asp-action="AddReply" method="post" novalidate>
+                    <input type="hidden" name="ForumPostId" value="@Model.Id" />
+                    <div class="mb-3">
+                        <label for="reply-content" class="form-label visually-hidden">Reply Content</label>
+                        <textarea id="reply-content" name="Content" class="form-control" rows="4" placeholder="Type your reply here..." required aria-required="true"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary" aria-label="Submit your reply to this post">Submit Reply</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <div class="mt-4">
+        <a asp-action="Index" class="btn btn-outline-secondary" aria-label="Return to the main forum page">Back to Forum</a>
+    </div>
+</div>

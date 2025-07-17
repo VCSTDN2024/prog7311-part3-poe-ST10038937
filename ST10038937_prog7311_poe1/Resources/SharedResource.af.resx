@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- Shared -->
+  <data name="Welcome" xml:space="preserve">
+    <value>Welkom by Agri-Energy Connect!</value>
+  </data>
+  <data name="Forum" xml:space="preserve">
+    <value>Gemeenskapsforum</value>
+  </data>
+  <data name="Products" xml:space="preserve">
+    <value>Produkte</value>
+  </data>
+  <data name="Language" xml:space="preserve">
+    <value>Taal</value>
+  </data>
+
+  <!-- About Page -->
+  <data name="AboutAgriEnergyConnect" xml:space="preserve">
+    <value>Oor Agri-Energy Connect</value>
+  </data>
+  <data name="AnEnterpriseGradeSoftwareSystem" xml:space="preserve">
+    <value>'n Ondernemingsgraad Sagtewarestelsel vir die Moderne Landbousektor</value>
+  </data>
+  <data name="PlatformOverview" xml:space="preserve">
+    <value>Platform Oorsig</value>
+  </data>
+  <data name="AgriEnergyConnectDescription" xml:space="preserve">
+    <value>Agri-Energy Connect is 'n gesofistikeerde, web-gebaseerde ondernemingstelsel wat ontwerp is om as 'n sentrale markplek vir die landboubedryf te dien. Dit bemagtig boere deur robuuste gereedskap te voorsien om hul produkte te bestuur, terwyl dit hulle met 'n breë netwerk van werknemers en belanghebbendes verbind. Die platform fasiliteer naatlose interaksie, deursigtige databestuur en gemeenskapsbetrokkenheid, wat doeltreffendheid en groei vir alle gebruikers aandryf.</value>
+  </data>
+  <data name="KeyFeatures" xml:space="preserve">
+    <value>Sleutelkenmerke</value>
+  </data>
+  <data name="ProductFarmerManagement" xml:space="preserve">
+    <value>Produk- &amp; Boerebestuur</value>
+  </data>
+  <data name="ProductFarmerManagementDescription" xml:space="preserve">
+    <value>Volledige Skep, Lees, Opdateer en Verwyder (CRUD) funksionaliteit vir boereprofiele en hul produklyste.</value>
+  </data>
+  <data name="CommunityForum" xml:space="preserve">
+    <value>Gemeenskapsforum</value>
+  </data>
+  <data name="CommunityForumDescription" xml:space="preserve">
+    <value>'n Interaktiewe forum vir boere en werknemers om betrokke te raak, vrae te vra en kennis te deel, volledig met antwoorde en moderering.</value>
+  </data>
+  <data name="RoleBasedAccessControl" xml:space="preserve">
+    <value>Rolgebaseerde Toegangsbeheer</value>
+  </data>
+  <data name="RoleBasedAccessControlDescription" xml:space="preserve">
+    <value>Veilige stawing- en magtigingstelsel wat onderskei tussen Boer- en Werknemerrolle, om te verseker dat gebruikers slegs toegang tot toepaslike funksies het.</value>
+  </data>
+  <data name="AuditLogging" xml:space="preserve">
+    <value>Ouditlogboeke</value>
+  </data>
+  <data name="AuditLoggingDescription" xml:space="preserve">
+    <value>Omvattende en filtreerbare ouditspore wat kritiese stelselgebeure vir sekuriteit, nakoming en probleemoplossing aanteken.</value>
+  </data>
+  <data name="AjaxLocalization" xml:space="preserve">
+    <value>AJAX-aangedrewe Lokalisering</value>
+  </data>
+  <data name="AjaxLocalizationDescription" xml:space="preserve">
+    <value>Naatlose, herlaai-vrye taalskakeling tussen Engels, Afrikaans en isiZulu vir 'n voortreflike, ononderbroke gebruikerservaring.</value>
+  </data>
+  <data name="ModernUIAccessibility" xml:space="preserve">
+    <value>Moderne UI &amp; Toeganklikheid</value>
+  </data>
+  <data name="ModernUIAccessibilityDescription" xml:space="preserve">
+    <value>'n Responsiewe, visueel aantreklike koppelvlak met 'n sterk fokus op toeganklikheid (ARIA, WCAG) om bruikbaarheid vir almal te verseker.</value>
+  </data>
+  <data name="EnterpriseCharacteristics" xml:space="preserve">
+    <value>Ondernemingsagtewarestelsel Eienskappe</value>
+  </data>
+  <data name="EnterprisePrinciples" xml:space="preserve">
+    <value>Ons platform is gebou met kernondernemingsbeginsels om te verseker dat dit robuust, betroubaar en gereed is vir besigheidskritiese bedrywighede:</value>
+  </data>
+  <data name="Scalability" xml:space="preserve">
+    <value>Skaalbaarheid:</value>
+  </data>
+  <data name="ScalabilityDescription" xml:space="preserve">
+    <value>Gebou op die hoëprestasie ASP.NET Core-raamwerk, is die stelsel ontwerp om groei in gebruikers en data doeltreffend te hanteer.</value>
+  </data>
+  <data name="Security" xml:space="preserve">
+    <value>Sekuriteit:</value>
+  </data>
+  <data name="SecurityDescription" xml:space="preserve">
+    <value>Maak gebruik van ASP.NET Core Identity vir robuuste stawing en magtiging, aangevul met gedetailleerde ouditlogboeke vir volle naspeurbaarheid.</value>
+  </data>
+  <data name="ReliabilityMaintainability" xml:space="preserve">
+    <value>Betroubaarheid &amp; Onderhoubaarheid:</value>
+  </data>
+  <data name="ReliabilityMaintainabilityDescription" xml:space="preserve">
+    <value>Nakoming van SOLID-beginsels en die gebruik van gevestigde ontwerppatrone lei tot 'n skoon, onderhoubare en toetsbare kodebasis.</value>
+  </data>
+  <data name="Accessibility" xml:space="preserve">
+    <value>Toeganklikheid (A11y):</value>
+  </data>
+  <data name="AccessibilityDescription" xml:space="preserve">
+    <value>'n Omvattende verbintenis tot toeganklikheid, wat ARIA-landmerke, semantiese HTML en hoëkontras-ontwerp insluit om aan diverse gebruikersbehoeftes te voldoen.</value>
+  </data>
+  <data name="DesignAndArchitecture" xml:space="preserve">
+    <value>Ontwerp- en Argitektuurpatrone</value>
+  </data>
+  <data name="DesignPatternsIntro" xml:space="preserve">
+    <value>Die stelsel se argitektuur is gegrond op bewese ontwerppatrone om 'n duidelike skeiding van belange en 'n buigsame, komponent-gebaseerde struktuur te verseker:</value>
+  </data>
+  <data name="MVC" xml:space="preserve">
+    <value>Model-View-Controller (MVC)</value>
+  </data>
+  <data name="MVCDescription" xml:space="preserve">
+    <value>Die kern argitektoniese patroon wat toepassingslogika, data en aanbieding skei, wat georganiseerde en parallelle ontwikkeling bevorder.</value>
+  </data>
+  <data name="RepositoryPattern" xml:space="preserve">
+    <value>Repository Patroon</value>
+  </data>
+  <data name="RepositoryPatternDescription" xml:space="preserve">
+    <value>Ontkoppel die besigheidslogika van die datatoegangslaag, wat meer buigsame en toetsbare data-bewerkings moontlik maak.</value>
+  </data>
+  <data name="ObserverPattern" xml:space="preserve">
+    <value>Observer Patroon</value>
+  </data>
+  <data name="ObserverPatternDescription" xml:space="preserve">
+    <value>Aktiveer 'n publiseer-inteken-meganisme vir gebeurtenis-hantering, wat 'n ontkoppelde stelsel skep waar komponente kan reageer op toestandveranderinge sonder direkte afhanklikhede. Dit word hieronder lewendig gedemonstreer.</value>
+  </data>
+  <data name="DependencyInjection" xml:space="preserve">
+    <value>Dependency Injection (DI)</value>
+  </data>
+  <data name="DependencyInjectionDescription" xml:space="preserve">
+    <value>Word wyd deur die toepassing gebruik via die ingeboude ASP.NET Core-dienshouer om afhanklikhede te bestuur en losse koppeling te bevorder.</value>
+  </data>
+  <data name="LiveObserverDemo" xml:space="preserve">
+    <value>Lewendige Observer Patroon Demo</value>
+  </data>
+  <data name="LiveObserverDemoDescription" xml:space="preserve">
+    <value>Hierdie demo illustreer hoe veelvuldige komponente ('n statusvertoning en 'n logger) reageer op toestandveranderinge vanaf 'n enkele bron sonder om direk gekoppel te wees.</value>
+  </data>
+  <data name="SubjectStatus" xml:space="preserve">
+    <value>Onderwerpstatus:</value>
+  </data>
+  <data name="TriggerStateChange" xml:space="preserve">
+    <value>Sneller Toestandverandering</value>
+  </data>
+  <data name="ObserverLog" xml:space="preserve">
+    <value>Observer Logboek:</value>
+  </data>
+  <data name="DevelopmentApproachHeading" xml:space="preserve">
+    <value>Ondernemingsagtewarestelsel Ontwikkeling</value>
+  </data>
+  <data name="TechStack" xml:space="preserve">
+    <value>Tegnologiestapel</value>
+  </data>
+  <data name="Backend" xml:space="preserve">
+    <value>Backend:</value>
+  </data>
+  <data name="Frontend" xml:space="preserve">
+    <value>Frontend:</value>
+  </data>
+  <data name="Database" xml:space="preserve">
+    <value>Databasis:</value>
+  </data>
+  <data name="Authentication" xml:space="preserve">
+    <value>Stawing:</value>
+  </data>
+  <data name="DevelopmentApproach" xml:space="preserve">
+    <value>Ontwikkelingsbenadering</value>
+  </data>
+  <data name="DevelopmentApproachDescription" xml:space="preserve">
+    <value>Hierdie projek is ontwikkel met behulp van 'n iteratiewe en inkrementele metodologie, gelei deur ratse beginsels. Ons het gefokus op die lewering van funksionele komponente in fases, wat deurlopende terugvoer en verfyning moontlik gemaak het. Hierdie benadering het klem gelê op kodekwaliteit, nakoming van beste praktyke en 'n verbintenis tot die bou van 'n robuuste en gebruiker-sentriese finale produk.</value>
+  </data>
+</root>

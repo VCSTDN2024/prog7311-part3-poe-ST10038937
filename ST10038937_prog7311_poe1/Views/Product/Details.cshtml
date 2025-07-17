@@ -1,0 +1,91 @@
+@model ST10038937_prog7311_poe1.Models.Product
+@using Microsoft.AspNetCore.Identity
+@using ST10038937_prog7311_poe1.Models
+@inject UserManager<ApplicationUser> UserManager
+
+@{
+    ViewData["Title"] = "Product Details";
+    var isEmployee = User.IsInRole("Employee");
+    var isFarmer = User.IsInRole("Farmer");
+}
+
+<div class="container main-container">
+    <h1 class="display-4 mb-4">Product Details</h1>
+
+    <div class="row">
+        <main class="col-md-8">
+            <section class="card shadow mb-4" aria-labelledby="product-details-heading">
+                <div class="card-header">
+                    <h2 id="product-details-heading" class="h5 mb-0 text-white">@Model.Name</h2>
+                </div>
+                <div class="card-body">
+                    <dl class="row">
+                        <dt class="col-sm-4 fw-bold">@Html.DisplayNameFor(model => model.Category)</dt>
+                        <dd class="col-sm-8">@Html.DisplayFor(model => model.Category)</dd>
+
+                        <dt class="col-sm-4 fw-bold">@Html.DisplayNameFor(model => model.ProductionDate)</dt>
+                        <dd class="col-sm-8">@Model.ProductionDate.ToLongDateString()</dd>
+
+                        <dt class="col-sm-4 fw-bold">@Html.DisplayNameFor(model => model.Price)</dt>
+                        <dd class="col-sm-8">R @Html.DisplayFor(model => model.Price)</dd>
+
+                        <dt class="col-sm-4 fw-bold">@Html.DisplayNameFor(model => model.QuantityAvailable)</dt>
+                        <dd class="col-sm-8">@Html.DisplayFor(model => model.QuantityAvailable) units</dd>
+
+                        <dt class="col-sm-4 fw-bold">@Html.DisplayNameFor(model => model.Description)</dt>
+                        <dd class="col-sm-8">@Html.DisplayFor(model => model.Description)</dd>
+
+                        @if (isEmployee)
+                        {
+                            <dt class="col-sm-4 fw-bold">Farmer</dt>
+                            <dd class="col-sm-8">
+                                <a asp-controller="Farmer" asp-action="Details" asp-route-id="@Model.FarmerId" aria-label="View details for farmer @(Model.Farmer?.Name)">
+                                    @(Model.Farmer?.Name)
+                                </a>
+                            </dd>
+
+                            <dt class="col-sm-4 fw-bold">Farm Name</dt>
+                            <dd class="col-sm-8">@(Model.Farmer?.FarmName)</dd>
+                        }
+                    </dl>
+                </div>
+                <div class="card-footer">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <a asp-action="Index" class="btn btn-outline-secondary" aria-label="Return to the full product list">Back to List</a>
+                        @if (isFarmer)
+                        {
+                            <div class="btn-group" role="group">
+                                <a asp-action="Edit" asp-route-id="@Model.ProductId" class="btn btn-warning" aria-label="Edit this product: @Model.Name">Edit</a>
+                                <a asp-action="Delete" asp-route-id="@Model.ProductId" class="btn btn-danger" aria-label="Delete this product: @Model.Name">Delete</a>
+                            </div>
+                        }
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <aside class="col-md-4">
+            <section class="card shadow" aria-labelledby="summary-heading">
+                <div class="card-header">
+                    <h2 id="summary-heading" class="h5 mb-0 text-white">Summary</h2>
+                </div>
+                <div class="card-body">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Category
+                            <span class="badge bg-primary rounded-pill">@Model.Category</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Price
+                            <span class="fw-bold">R @Model.Price</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Available
+                            <span>@Model.QuantityAvailable units</span>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </aside>
+    </div>
+</div>

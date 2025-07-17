@@ -1,0 +1,43 @@
+@model ST10038937_prog7311_poe1.Models.ForumPost
+
+@{
+    ViewData["Title"] = "Create a New Forum Post";
+}
+
+<div class="container main-container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <section class="card shadow-sm" aria-labelledby="create-post-heading">
+                <div class="card-header">
+                    <h1 id="create-post-heading" class="h4 mb-0 text-white">@ViewData["Title"]</h1>
+                </div>
+                <div class="card-body">
+                    <form asp-action="Create" method="post" novalidate>
+                        <div asp-validation-summary="ModelOnly" class="alert alert-danger" role="alert"></div>
+
+                        <div class="mb-3">
+                            <label asp-for="Title" class="form-label fw-bold">Post Title</label>
+                            <input asp-for="Title" class="form-control" placeholder="Enter a clear and descriptive title" aria-required="true" aria-describedby="title-validation" />
+                            <span asp-validation-for="Title" id="title-validation" class="text-danger"></span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="Content" class="form-label fw-bold">Your Message</label>
+                            <textarea asp-for="Content" class="form-control" rows="8" placeholder="Share your thoughts, ask a question, or start a discussion..." aria-required="true" aria-describedby="content-validation"></textarea>
+                            <span asp-validation-for="Content" id="content-validation" class="text-danger"></span>
+                        </div>
+
+                        <div class="d-flex justify-content-end gap-2 mt-4">
+                            <a asp-action="Index" class="btn btn-outline-secondary" aria-label="Cancel and return to the forum index">Cancel</a>
+                            <button type="submit" class="btn btn-primary" aria-label="Submit your new post to the forum">Create Post</button>
+                        </div>
+                    </form>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

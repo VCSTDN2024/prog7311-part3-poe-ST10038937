@@ -1,0 +1,50 @@
+@model ST10038937_prog7311_poe1.Models.Product
+
+@{
+    ViewData["Title"] = "Delete Product";
+}
+
+<div class="container main-container">
+    <h1 class="display-4 mb-4">Delete Product</h1>
+
+    <div class="alert alert-danger" role="alert">
+        <h4 class="alert-heading">Warning!</h4>
+        <p class="mb-0">Are you sure you want to permanently delete this product? This action cannot be undone.</p>
+    </div>
+
+    <section class="card shadow mb-4" aria-labelledby="delete-confirm-heading">
+        <div class="card-header">
+            <h2 id="delete-confirm-heading" class="h5 mb-0 text-white">Confirm Deletion of: @Model.Name</h2>
+        </div>
+        <div class="card-body">
+            <dl class="row">
+                <dt class="col-sm-3 fw-bold">@Html.DisplayNameFor(model => model.Name)</dt>
+                <dd class="col-sm-9">@Html.DisplayFor(model => model.Name)</dd>
+
+                <dt class="col-sm-3 fw-bold">@Html.DisplayNameFor(model => model.Category)</dt>
+                <dd class="col-sm-9">@Html.DisplayFor(model => model.Category)</dd>
+
+                <dt class="col-sm-3 fw-bold">@Html.DisplayNameFor(model => model.ProductionDate)</dt>
+                <dd class="col-sm-9">@Model.ProductionDate.ToLongDateString()</dd>
+
+                <dt class="col-sm-3 fw-bold">@Html.DisplayNameFor(model => model.Price)</dt>
+                <dd class="col-sm-9">R @Html.DisplayFor(model => model.Price)</dd>
+
+                <dt class="col-sm-3 fw-bold">@Html.DisplayNameFor(model => model.QuantityAvailable)</dt>
+                <dd class="col-sm-9">@Html.DisplayFor(model => model.QuantityAvailable) units</dd>
+
+                <dt class="col-sm-3 fw-bold">@Html.DisplayNameFor(model => model.Description)</dt>
+                <dd class="col-sm-9">@Html.DisplayFor(model => model.Description)</dd>
+            </dl>
+        </div>
+        <div class="card-footer">
+            <form asp-action="Delete">
+                <input type="hidden" asp-for="ProductId" />
+                <div class="d-flex justify-content-between">
+                    <a asp-action="Index" class="btn btn-outline-secondary" aria-label="Cancel deletion and return to product list">Cancel</a>
+                    <button type="submit" class="btn btn-danger" aria-label="Confirm deletion of product @Model.Name">Delete Permanently</button>
+                </div>
+            </form>
+        </div>
+    </section>
+</div>
